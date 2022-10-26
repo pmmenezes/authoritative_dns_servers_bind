@@ -1,0 +1,13 @@
+$TTL	1h
+@  IN  SOA ns1.{{ domain }}. {{ email }}.{{ domain }}. (
+			      {{ serial }} ; serial
+			      3H ; refresh
+			      15 ; retry
+			      1w ; expire
+			      3h ; min ttl
+			     )
+       IN  NS     ns1.{{ domain }}.
+       IN  NS     ns2.{{ domain }}.
+
+ns1    IN  A      {{ hostvars.ns1.ansible_host }}
+ns2    IN  A      {{ hostvars.ns2.ansible_host }}
