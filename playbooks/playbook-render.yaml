@@ -1,0 +1,6 @@
+- tasks:
+  - name: "Render"
+    template:
+      src: "roles/nameservers/templates/domain.hosts.j2"
+      dest: "./{{ domain }}.hosts"
+    delegate_to: localhost

@@ -4,4 +4,4 @@
 
 - hosts: nameservers
   roles:
-    - nameserver
+    - { nameserver } 
